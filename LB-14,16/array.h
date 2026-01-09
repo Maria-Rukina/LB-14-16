@@ -2,18 +2,18 @@
 #ifndef ARRAY_H
 #define ARRAY_H
 
-double* full_elements(double* ptr_array, int n); //заполнение массива
+double* full_elements(double* ptr_array, int n); //Р·Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°
 
-double func(double x); //функция для заполнения массива
+double func(double x); //С„СѓРЅРєС†РёСЏ РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РјР°СЃСЃРёРІР°
 
-int put_elements(double* ptr_array, int n); //вывод массива
+int put_elements(double* ptr_array, int n); //РІС‹РІРѕРґ РјР°СЃСЃРёРІР°
 
-double* calc_elements(double* ptr_array, int n); //индивидуальный вариант
+double* calc_elements(double* ptr_array, int n); //РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Р№ РІР°СЂРёР°РЅС‚
 
-double sum_elements(double* ptr_array, int begin, int end); //сумма элементов массива в диапазоне
+double sum_elements(double* ptr_array, int begin, int end); //СЃСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° РІ РґРёР°РїР°Р·РѕРЅРµ
 
-int find_element(double* ptr_array, int n, double element); //найти элемент
+int find_element(double* ptr_array, int n, double element); //РЅР°Р№С‚Рё СЌР»РµРјРµРЅС‚
 
-int delete_k(double* ptr_array, int size, int k); //удалить элемент по номеру
+int delete_k(double* ptr_array, int size, int k); //СѓРґР°Р»РёС‚СЊ СЌР»РµРјРµРЅС‚ РїРѕ РЅРѕРјРµСЂСѓ
 
 #endif // !ARRAY_H
