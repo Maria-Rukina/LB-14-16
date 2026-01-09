@@ -2,6 +2,7 @@
 #define _USE_MATH_DEFINES
 #include <stdio.h>
 #include <locale.h>
+#include <malloc.h>
 #include <math.h>
 #include <stdlib.h>
 #include "array.h"
@@ -19,15 +20,15 @@ int main()
 int task1(void)
 {
     int size;
-    printf("Введите размер массива: ");
+    printf("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°: ");
     scanf("%d", &size);
 
     int begin, end;
-    printf("\nВведите начало и конец: ");
+    printf("\nР’РІРµРґРёС‚Рµ РЅР°С‡Р°Р»Рѕ Рё РєРѕРЅРµС†: ");
     scanf("%d %d", &begin, &end);
 
     int k;
-    printf("\nВведите номер элемента: ");
+    printf("\nР’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЌР»РµРјРµРЅС‚Р°: ");
     scanf("%d", &k);
 
     double* ptr_array = malloc(size * sizeof(double));
@@ -62,17 +63,17 @@ int task1(void)
     for (int i = 0; i < size; i++) ptr_result3[i] = ptr_array[i];
     find_element(ptr_result1, size, k);
 
-    printf("Исходный массив:\n");
+    printf("РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ:\n");
     put_elements(ptr_array, size);
 
-    printf("Преобразованный массив:\n");
+    printf("РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ:\n");
     put_elements(ptr_result1, size);
 
     int s = put_elements(ptr_result2, size);
-    printf("Сумма элементов массива в диапазоне: %d\n", s);
+    printf("РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° РІ РґРёР°РїР°Р·РѕРЅРµ: %d\n", s);
 
     int i = put_elements(ptr_result3, size);
-    printf("Индекс искуемого числа: %d\n", i);
+    printf("РРЅРґРµРєСЃ РёСЃРєСѓРµРјРѕРіРѕ С‡РёСЃР»Р°: %d\n", i);
 
     free(ptr_array);
     free(ptr_result1);
@@ -85,7 +86,7 @@ int task1(void)
 int task2(void)
 {
     int size;
-    printf("Введите размер массива: ");
+    printf("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°: ");
     scanf("%d", &size);
 
     double* ptr_array = malloc(size * sizeof(double));
@@ -96,14 +97,14 @@ int task2(void)
         scanf("%lf", &ptr_array[i]);
     }
 
-    printf("Введённый массив:\n");
+    printf("Р’РІРµРґС‘РЅРЅС‹Р№ РјР°СЃСЃРёРІ:\n");
     put_elements(ptr_array, size);
 
     int k;
-    printf("\nВведите номер элемента, который хотите удалить: ");
+    printf("\nР’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЌР»РµРјРµРЅС‚Р°, РєРѕС‚РѕСЂС‹Р№ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ: ");
     scanf("%d", &k);
     size = delete_k(ptr_array, size, k);
-    printf("\nПолученный массив:\n");
+    printf("\nРџРѕР»СѓС‡РµРЅРЅС‹Р№ РјР°СЃСЃРёРІ:\n");
     put_elements(ptr_array, size);
 
     free(ptr_array);
